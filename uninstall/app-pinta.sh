@@ -1,1 +1,1 @@
-sudo snap remove pinta
+sudo dnf remove -y pinta

@@ -1,4 +1,3 @@
-sudo apt -y purge "php8.3*"
-sudo add-apt-repository -y --remove ppa:ondrej/php
+sudo dnf remove -y php php-{cli,curl,apcu,intl,mbstring,opcache,pgsql,mysqlnd,sqlite3,redis,xml,zip}
 
 sudo rm /usr/local/bin/composer

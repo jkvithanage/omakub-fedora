@@ -1,1 +1,1 @@
-sudo apt remove --purge -y signal-desktop
+sudo dnf remove -y signal-desktop
