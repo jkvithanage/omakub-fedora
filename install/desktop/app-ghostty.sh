@@ -1,4 +1,8 @@
-dnf copr enable pgdev/ghostty
-dnf install ghostty
+sudo dnf -y copr enable pgdev/ghostty
+sudo dnf -y install ghostty
 mkdir -p ~/.config/ghostty
-cp ~/.local/share/omakub/configs/ghostty/ghostty.toml ~/.config/ghostty/ghostty.toml
+
+cp ~/.local/share/omakub/configs/ghostty.config ~/.config/ghostty/config
+cp ~/.local/share/omakub/themes/tokyo-night/ghostty.theme ~/.config/ghostty/theme
+cp ~/.local/share/omakub/configs/ghostty/fonts/CaskaydiaMono ~/.config/ghostty/font
+cp ~/.local/share/omakub/configs/ghostty/font-size ~/.config/ghostty/font-size
