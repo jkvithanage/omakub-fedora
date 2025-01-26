@@ -6,7 +6,7 @@ Comment=System information from Fastfetch
 Exec=ghostty --config-file=/home/$USER/.local/share/omakub/defaults/ghostty/pane.config --class=About --title=About -e bash -c 'fastfetch; read -n 1 -s'
 Terminal=false
 Type=Application
-Icon=/home/$USER/.local/share/omakub/applications/icons/Ubuntu.png
+Icon=/home/$USER/.local/share/omakub/applications/icons/Fedora.png
 Categories=GTK;
 StartupNotify=false
 EOF
