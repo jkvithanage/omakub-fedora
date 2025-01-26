@@ -8,7 +8,7 @@ Exec=/home/$USER/.local/bin/cursor.AppImage
 Terminal=false
 Type=Application
 Keywords=Cursor;cursor
-Icon=/home/$USER/.local/share/omakub/applications/icons/Cursor.png
+Icon=/home/$USER/.local/share/omakub/applications/icons/cursor.png
 Categories=GTK;
 StartupNotify=false
 EOF
