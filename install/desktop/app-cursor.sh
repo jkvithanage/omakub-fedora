@@ -10,6 +10,10 @@ mv cursor.AppImage ~/.local/bin/cursor
 mkdir -p ~/.config/Cursor/User
 cp ~/.local/share/omakub/configs/cursor.json ~/.config/Cursor/User/settings.json
 
+if [[ -d ~/.local/share/applications ]]; then
+	source ~/.local/share/omakub/applications/Cursor.sh
+fi
+
 # Install default supported themes
 # TODO: Enable this once we have a working cli
 # ~/.local/bin/cursor --install-extension enkia.tokyo-night
