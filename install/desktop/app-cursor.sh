@@ -11,5 +11,6 @@ mkdir -p ~/.config/Cursor/User
 cp ~/.local/share/omakub/configs/cursor.json ~/.config/Cursor/User/settings.json
 
 # Install default supported themes
-~/.local/bin/cursor --install-extension enkia.tokyo-night
+# TODO: Enable this once we have a working cli
+# ~/.local/bin/cursor --install-extension enkia.tokyo-night
 cd -
