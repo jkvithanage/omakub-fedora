@@ -1,15 +1,15 @@
 # Favorite apps for dock
 apps=(
 	"google-chrome.desktop"
-	"Ghostty.desktop"
+	"com.mitchellh.ghostty.desktop"
 	"Neovim.desktop"
 	"code.desktop"
 	"WhatsApp.desktop"
-	"signal-desktop.desktop"
+	"org.signal.Signal.desktop"
 	"Zoom.desktop"
-	"spotify.desktop"
+	"com.spotify.Client.desktop"
 	"steam.desktop"
-	"pinta_pinta.desktop"
+	"pinta.desktop"
 	"md.obsidian.Obsidian.desktop"
 	"Activity.desktop"
 	"Docker.desktop"
@@ -17,7 +17,7 @@ apps=(
 	"1password.desktop"
 	"org.gnome.Settings.desktop"
 	"org.gnome.Nautilus.desktop"
-	"localsend_app.desktop"
+	"org.localsend.localsend_app.desktop"
 )
 
 # Array to hold installed favorite apps
