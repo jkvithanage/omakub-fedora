@@ -8,10 +8,11 @@ Turn a fresh Fedora installation into a fully-configured, beautiful, and modern 
 Watch the introduction video and read more at [omakub.org](https://omakub.org).
 
 # Install
+
 ```bash
 sudo dnf update -y
 sudo dnf install -y wget
-wget -qO- https://raw.githubusercontent.com/brsc2909/omakub-fedora/stable/boot.sh | bash
+wget -qO- https://raw.githubusercontent.com/jkvithanage/omakub-fedora/stable/boot.sh | bash
 ```
 
 ## Contributing to the documentation
