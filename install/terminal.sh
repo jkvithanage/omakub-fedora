@@ -12,6 +12,3 @@ for installer in ~/.local/share/omakub/install/terminal/*.sh; do
         source "$installer" || echo "Warning: Installer $installer failed, continuing..."
     fi
 done
-
-# Set zsh as default shell
-chsh -s $(command -v zsh)

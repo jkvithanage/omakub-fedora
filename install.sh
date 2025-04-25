@@ -32,3 +32,6 @@ if $RUNNING_GNOME; then
   gsettings set org.gnome.desktop.screensaver lock-enabled true
   gsettings set org.gnome.desktop.session idle-delay 300
 fi
+
+# Set zsh as default shell
+chsh -s $(command -v zsh)

@@ -1,21 +1,26 @@
-# History control
-if command -v shopt &> /dev/null; then
-  shopt -s histappend
-  HISTCONTROL=ignoreboth
-  HISTSIZE=32768
-  HISTFILESIZE="${HISTSIZE}"
+# Shell-specific configurations
+if [ "$OMAKUB_SHELL" = "bash" ]; then
+    # History control for bash
+    shopt -s histappend
+    HISTCONTROL=ignoreboth
+    HISTSIZE=32768
+    HISTFILESIZE="${HISTSIZE}"
+
+    # Autocompletion for bash
+    source /usr/share/bash-completion/bash_completion
+elif [ "$OMAKUB_SHELL" = "zsh" ]; then
+    # History control for zsh
+    HISTSIZE=32768
+    SAVEHIST=32768
+    setopt HIST_IGNORE_ALL_DUPS
+    setopt HIST_SAVE_NO_DUPS
+
+    # Autocompletion for zsh
+    autoload -Uz compinit
+    compinit
 fi
-# Use powerline
-USE_POWERLINE="true"
-# Has weird character width
-# Example:
-#    is not a diamond
-HAS_WIDECHARS="false"
 
-# Autocompletion
-[ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
-
-# Set complete path
+# Set complete path (common for both shells)
 export PATH="./bin:$HOME/.local/bin:$HOME/.local/share/omakub/bin:$PATH"
 set +h
 
