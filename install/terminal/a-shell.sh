@@ -14,11 +14,6 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
 fi
 
-# Load the PATH for use later in the installers
-if [ -f ~/.local/share/omakub/defaults/zsh/shell ]; then
-  source ~/.local/share/omakub/defaults/zsh/shell
-fi
-
 [ -f ~/.inputrc ] && mv ~/.inputrc ~/.inputrc.bak
 # Configure the inputrc using Omakub defaults
 cp ~/.local/share/omakub/configs/inputrc ~/.inputrc
