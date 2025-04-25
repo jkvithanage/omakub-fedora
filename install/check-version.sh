@@ -9,7 +9,7 @@ fi
 . /etc/os-release
 
 # Check if running on Fedora
-if [ "$ID" != "fedora" ] || [ "$ID" != "fedora-asahi-remix" ]; then
+if [ "$ID" != "fedora" ] && [ "$ID" != "fedora-asahi-remix" ]; then
     echo "$(tput setaf 1)Error: OS requirement not met"
     echo "You are currently running: $ID $VERSION_ID"
     echo "OS required: Fedora"
