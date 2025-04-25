@@ -33,5 +33,16 @@ if $RUNNING_GNOME; then
   gsettings set org.gnome.desktop.session idle-delay 300
 fi
 
+# Function to check if user can use sudo
+user_can_sudo() {
+  sudo -n true 2>/dev/null
+  return $?
+}
+
 # Set zsh as default shell
-chsh -s $(command -v zsh)
+echo "Changing default shell to zsh..."
+if user_can_sudo; then
+  sudo -k chsh -s $(command -v zsh) "$USER"  # -k forces the password prompt
+else
+  chsh -s $(command -v zsh) "$USER"          # run chsh normally
+fi
