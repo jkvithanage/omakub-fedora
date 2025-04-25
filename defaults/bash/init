@@ -1,11 +1,26 @@
 if command -v mise &> /dev/null; then
-  eval "$(mise activate bash)"
+  eval "$(mise activate $OMAKUB_SHELL)"
 fi
 
 if command -v zoxide &> /dev/null; then
-  eval "$(zoxide init bash)"
+  eval "$(zoxide init $OMAKUB_SHELL)"
+fi
+
+if command -v atuin &> /dev/null; then
+  export ATUIN_NOBIND="true"
+  eval "$(atuin init $OMAKUB_SHELL)"
+  bindkey '^r' _atuin_search_widget
+fi
+
+if command -v starship &> /dev/null; then
+  eval "$(starship init $OMAKUB_SHELL)"
 fi
 
 if command -v fzf &> /dev/null; then
-  eval "$(fzf --bash)"
+  [ -r /usr/share/bash-completion/completions/fzf ] && . /usr/share/bash-completion/completions/fzf
+  [ -r /usr/share/doc/fzf/examples/key-bindings.bash ] && . /usr/share/doc/fzf/examples/key-bindings.bash
+fi
+
+if command -v fastfetch &> /dev/null; then
+  fastfetch
 fi

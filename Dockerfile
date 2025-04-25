@@ -9,15 +9,17 @@ RUN dnf update -y && \
         wget \
         curl \
         unzip \
+        bash-completion \
     && dnf clean all
+
 # Create a non-root user to simulate a real setup
-RUN useradd -ms /bin/bash dev && echo "dev ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+RUN useradd -ms /bin/bash dev && \
+    echo "dev:dev" | chpasswd && \
+    echo "dev ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+# Copy the parent directory into the container
+COPY . /home/dev/omakub-fedora
+RUN chown -R dev:dev /home/dev/omakub-fedora
 
 USER dev
-WORKDIR /home/dev
-
-# Bootstrapping Omakub
-RUN wget -qO- https://raw.githubusercontent.com/jkvithanage/omakub-fedora/stable/boot.sh | bash
-
-# Start shell
-CMD ["/bin/bash"]
+WORKDIR /home/dev/omakub-fedora

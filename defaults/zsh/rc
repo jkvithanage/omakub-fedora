@@ -1,4 +1,4 @@
-export OMAKUB_SHELL="bash"
+export OMAKUB_SHELL="zsh"
 source ~/.local/share/omakub/defaults/bash/shell
 source ~/.local/share/omakub/defaults/bash/aliases
 source ~/.local/share/omakub/defaults/bash/prompt
